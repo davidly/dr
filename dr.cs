@@ -64,28 +64,6 @@ class Drives
 
                 Console.WriteLine();
             }
-
-#if false
-            using (ManagementObjectSearcher search = new ManagementObjectSearcher("SELECT * FROM Win32_DiskDrive"))
-            {
-                // extract model and interface information
-    
-                foreach ( Win32_DiskDrive /*ManagementObject*/ drive in search.Get())
-                {
-                    Console.WriteLine( drive.ToString() + drive.Model );
-                    string antecedent = drive["DeviceID"].ToString(); // the disk we're trying to find out about
-                    antecedent = antecedent.Replace(@"\", "\\"); // this is just to escape the slashes
-                    string query = "ASSOCIATORS OF {Win32_DiskDrive.DeviceID='" + antecedent + "'} WHERE AssocClass = Win32_DiskDriveToDiskPartition";
-                    using (ManagementObjectSearcher partitionSearch = new ManagementObjectSearcher(query))
-                    {
-                        foreach (ManagementObject part in partitionSearch.Get())
-                        {
-                            Console.WriteLine( "  " + part.ToString() );
-                        }
-                    }
-                }
-            }
-#endif
         }
         catch (Exception e)
         {
