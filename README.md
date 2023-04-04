@@ -20,6 +20,8 @@ Sample:
      e:  removable  fat32                      OLY E-M10II        7,572m        4,493m    512     64
      f:  removable  fat32                          WALKMAN       12,554m       12,080m    512     64
      g:  removable  exfat                             flac      976,312m      492,560m    512  1,024
+     h:      cdrom    udf                      Apr 03 2023       92,378m          781m  2,048      1
+     i:      cdrom   cdfs                             ASUS          262m            0m  2,048      1
      s:      fixed   ntfs                    s_ssd_4tb_pci    3,815,453m    3,645,809m    512      8
      w:    network   ntfs                         pictures   11,341,982m    4,483,096m    512      2
      x:    network   ntfs                        documents   28,486,662m   12,449,504m    512      2
